@@ -29,7 +29,7 @@ export default function Header() {
     >
       <div className="container-px flex h-20 items-center justify-between">
         <a href="#top" className="flex items-center" aria-label={site.name}>
-          <Logo className="h-9 w-auto" light={!scrolled} />
+          <Logo className="h-10 w-auto lg:h-11" light={!scrolled} />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">

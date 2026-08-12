@@ -42,7 +42,7 @@ export default function Management() {
           <div className="mt-12 grid gap-4 border-t border-white/10 pt-10 sm:grid-cols-3">
             {commitments.map((c) => (
               <div key={c} className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-400" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-400" />
                 <p className="text-sm leading-relaxed text-white/70">{c}</p>
               </div>
             ))}

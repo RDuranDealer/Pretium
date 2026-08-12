@@ -1,3 +1,5 @@
+import { logo } from "@/lib/site";
+
 type P = { className?: string };
 
 const base = "h-6 w-6";
@@ -88,38 +90,31 @@ export function Icon({ name, className }: { name: string; className?: string }) 
   );
 }
 
+/**
+ * Logotipo oficial de Pretium.
+ * `light` = true cuando el logo va sobre un fondo oscuro: en ese caso se usa
+ * la versión con el texto en blanco, manteniendo el isotipo azul intacto.
+ * El archivo se configura en src/lib/site.ts.
+ */
 export function Logo({ className = "h-9 w-auto", light = false }: P & { light?: boolean }) {
-  const main = light ? "#ffffff" : "#173a63";
-  const soft = light ? "#84addb" : "#2f6bb0";
+  const useLight = light && !!logo.srcLight;
+  const needsFilter = light && !logo.srcLight;
+
   return (
-    <svg viewBox="0 0 240 48" className={className} role="img" aria-label="Pretium Consulting">
-      <g>
-        <path d="M6 8h14a11 11 0 0 1 0 22h-7v10H6V8Z" fill={main} />
-        <path d="M13 15h6.5a4 4 0 0 1 0 8H13v-8Z" fill="#fff" />
-        <path d="M28 30h6l6 10h-8l-4-10Z" fill={soft} />
-      </g>
-      <text
-        x="54"
-        y="26"
-        fontFamily="system-ui, sans-serif"
-        fontSize="19"
-        fontWeight="700"
-        letterSpacing="0.5"
-        fill={main}
-      >
-        PRETIUM
-      </text>
-      <text
-        x="55"
-        y="39"
-        fontFamily="system-ui, sans-serif"
-        fontSize="10.5"
-        fontWeight="500"
-        letterSpacing="3.6"
-        fill={soft}
-      >
-        CONSULTING
-      </text>
-    </svg>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={useLight ? logo.srcLight : logo.src}
+      alt={logo.alt}
+      className={`${className} ${needsFilter ? "brightness-0 invert" : ""}`}
+      style={{ height: className.includes("h-") ? undefined : `${logo.height}px` }}
+    />
+  );
+}
+
+/** Solo el símbolo corporativo. Útil para avatares, badges y viñetas. */
+export function Isotipo({ className = "h-8 w-auto" }: P) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src={logo.isotipo} alt="" aria-hidden className={className} />
   );
 }

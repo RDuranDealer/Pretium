@@ -16,6 +16,43 @@ export const site = {
   linkedin: "https://www.linkedin.com/company/prt-cons",
 };
 
+/**
+ * LOGO DE LA EMPRESA
+ * ------------------
+ * Los archivos vectoriales oficiales están en  public/img/  y salen del
+ * original de Illustrator ("Logo Pretium.ai"), así que se ven nítidos en
+ * cualquier tamaño y pesan poco.
+ *
+ * Archivos disponibles:
+ *   /img/logo-pretium.svg                    Logotipo "Personas & Tecnología" (fondo claro)
+ *   /img/logo-pretium-light.svg              El mismo, con texto blanco (fondo oscuro)
+ *   /img/logo-pretium-consulting.svg         Variante "Consulting" (fondo claro)
+ *   /img/logo-pretium-consulting-light.svg   Variante "Consulting" (fondo oscuro)
+ *   /img/isotipo-pretium.svg                 Solo el símbolo (favicon, redes, avatar)
+ *
+ * Para cambiar de variante basta con editar las dos rutas de abajo.
+ * `height` controla el alto en píxeles; el ancho se ajusta solo.
+ */
+export const logo = {
+  src: "/img/logo-pretium.svg",
+  srcLight: "/img/logo-pretium-light.svg",
+  isotipo: "/img/isotipo-pretium.svg",
+  height: 38,
+  alt: "Pretium — Personas & Tecnología",
+};
+
+/**
+ * COLORES CORPORATIVOS (referencia rápida)
+ * Se definen en tailwind.config.ts; esta constante es solo documentación
+ * y se usa para el color del navegador en móviles.
+ */
+export const brandColors = {
+  azul: "#0280f9", // Azul Pretium — isotipo y logotipo
+  azulProfundo: "#193fea", // Extremo superior del degradado
+  negro: "#000000", // Texto del logotipo
+  tinta: "#0b1b33", // Texto de la web
+};
+
 export const nav = [
   { label: "Nosotros", href: "#nosotros" },
   { label: "Servicios", href: "#servicios" },

@@ -1,6 +1,24 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
-import { site } from "@/lib/site";
+import { site, brandColors } from "@/lib/site";
+
+/**
+ * Montserrat es la tipografía del logotipo corporativo.
+ * Va autoalojada (archivo en src/app/fonts/) en vez de cargarse desde Google:
+ * carga más rápido, no depende de un tercero y cumple con GDPR.
+ */
+const montserrat = localFont({
+  src: "./fonts/Montserrat.woff2",
+  weight: "100 900",
+  display: "swap",
+  variable: "--font-montserrat",
+  fallback: ["system-ui", "Segoe UI", "sans-serif"],
+});
+
+export const viewport: Viewport = {
+  themeColor: brandColors.azul,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -58,16 +76,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es-CL">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>
+    <html lang="es-CL" className={montserrat.variable}>
+      <body className={montserrat.className}>
         {children}
         <script
           type="application/ld+json"

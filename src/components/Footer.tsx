@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container-px py-14">
         <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr_1fr]">
           <div>
-            <Logo className="h-10 w-auto" />
+            <Logo className="h-12 w-auto" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-brand-900/60">
               {site.tagline}. Impulsamos la gestión de personas con soluciones
               eficientes y a la medida.

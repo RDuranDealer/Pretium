@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="grid items-center gap-14 pb-20 lg:grid-cols-12 lg:pb-28">
           <div className="lg:col-span-7">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90 backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent-400" />
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-400" />
               Consultores senior SAP HCM · SuccessFactors · S/4HANA
             </span>
 
