@@ -5,10 +5,10 @@ export const site = {
   tagline: "Consultoría especializada en SAP HCM y SuccessFactors",
   description:
     "Consultores senior en SAP HCM, SuccessFactors y S/4HANA. Implementación, soporte productivo, gestión del cambio y capacitación para empresas en Chile y Latinoamérica.",
-  email: "gloria.rodriguez@prtconsulting.cl",
-  phone: "+56 9 7699 9245",
-  phoneRaw: "+56976999245",
-  whatsapp: "56976999245",
+  email: "cristina.ordenes@prtconsulting.cl",
+  phone: "+56 9 9475 5573",
+  phoneRaw: "+56994755573",
+  whatsapp: "56994755573",
   address:
     "Av. Nueva Providencia 1945, Oficina 502, Providencia, Santiago, Chile",
   mapsUrl:
@@ -141,14 +141,28 @@ export const differentiators = [
   "Compromiso con la adopción y la mejora permanente",
 ];
 
+/**
+ * CLIENTES
+ * --------
+ * `logo` es la ruta al archivo dentro de public/img/clientes/.
+ * Si se deja vacío, la tarjeta muestra el nombre en texto, así que se puede
+ * agregar un cliente nuevo aunque todavía no se tenga su logotipo.
+ *
+ * Formato recomendado: SVG. Si sólo hay mapa de bits, PNG con fondo
+ * transparente de ~400 px de ancho y menos de 30 KB.
+ */
 export const clients = [
-  "Walmart",
-  "Coca-Cola",
-  "Cemin",
-  "Concha y Toro",
-  "Universidad de los Andes",
-  "Masisa",
-  "Universidad Mayor",
+  { name: "Walmart", logo: "/img/clientes/walmart.png" },
+  { name: "Coca-Cola Embonor", logo: "/img/clientes/coca-cola-embonor.png" },
+  { name: "Cemin", logo: "/img/clientes/cemin.png" },
+  { name: "Concha y Toro", logo: "/img/clientes/concha-y-toro.png" },
+  { name: "Sugal Chile", logo: "/img/clientes/sugal-chile.png" },
+  { name: "Masisa", logo: "/img/clientes/masisa.png" },
+  {
+    name: "Universidad de los Andes",
+    logo: "/img/clientes/universidad-de-los-andes.png",
+  },
+  { name: "Universidad Mayor", logo: "/img/clientes/universidad-mayor.png" },
 ];
 
 export const stats = [

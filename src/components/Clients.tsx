@@ -2,6 +2,7 @@ import Reveal from "./Reveal";
 import { clients } from "@/lib/site";
 
 export default function Clients() {
+  // La lista se duplica para que el desplazamiento continuo no muestre huecos.
   const row = [...clients, ...clients];
 
   return (
@@ -24,12 +25,24 @@ export default function Clients() {
           <div className="flex w-max animate-marquee gap-4">
             {row.map((c, i) => (
               <div
-                key={`${c}-${i}`}
-                className="flex h-24 w-56 shrink-0 items-center justify-center rounded-2xl border border-brand-100 bg-white px-6"
+                key={`${c.name}-${i}`}
+                className="group flex h-24 w-56 shrink-0 items-center justify-center rounded-2xl border border-brand-100 bg-white px-7"
               >
-                <span className="text-center text-base font-semibold tracking-tight text-brand-900/45">
-                  {c}
-                </span>
+                {c.logo ? (
+                  // Escala de grises por defecto para que las marcas convivan
+                  // sin competir entre sí ni con el azul corporativo.
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={c.logo}
+                    alt={`Logotipo de ${c.name}`}
+                    loading="lazy"
+                    className="max-h-12 w-auto max-w-full object-contain opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+                  />
+                ) : (
+                  <span className="text-center text-base font-semibold tracking-tight text-brand-900/45">
+                    {c.name}
+                  </span>
+                )}
               </div>
             ))}
           </div>
