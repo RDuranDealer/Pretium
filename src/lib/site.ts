@@ -168,7 +168,7 @@ export const clients = [
 export const stats = [
   { value: "8+", label: "Años de experiencia en el mercado" },
   { value: "87%", label: "Índice de recomendación y lealtad del clientes NPS, superando ampliamente el promedio de nuestra industria." },
-  { value: "95%", label: "Retención de clientes, relaciones al largo plazo con nuestros clientes" },
+  { value: "95%", label: "Retención de clientes, relaciones de largo plazo basadas en confianza" },
   { value: "24/7", label: "Soporte y continuidad operacional" },
 ];
 
