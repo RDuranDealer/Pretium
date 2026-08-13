@@ -166,8 +166,8 @@ export const clients = [
 ];
 
 export const stats = [
-  { value: "20+", label: "años de experiencia acumulada" },
-  { value: "100%", label: "foco en SAP HCM y SuccessFactors" },
+  { value: "8+", label: "años de experiencia en el mercado" },
+  { value: "87%", label: "índice de recomendación y lealtad del clientes NPS, superando ampliamente el promedio de nuestra industria." },
   { value: "8", label: "submódulos SAP HCM cubiertos" },
   { value: "24/7", label: "modelos de soporte disponibles" },
 ];
