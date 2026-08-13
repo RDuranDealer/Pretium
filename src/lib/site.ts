@@ -166,10 +166,10 @@ export const clients = [
 ];
 
 export const stats = [
-  { value: "8+", label: "años de experiencia en el mercado" },
-  { value: "87%", label: "índice de recomendación y lealtad del clientes NPS, superando ampliamente el promedio de nuestra industria." },
-  { value: "8", label: "submódulos SAP HCM cubiertos" },
-  { value: "24/7", label: "modelos de soporte disponibles" },
+  { value: "8+", label: "Años de experiencia en el mercado" },
+  { value: "87%", label: "Índice de recomendación y lealtad del clientes NPS, superando ampliamente el promedio de nuestra industria." },
+  { value: "95%", label: "Retención de clientes, relaciones al largo plazo con nuestros clientes" },
+  { value: "24/7", label: "Soporte y continuidad operacional" },
 ];
 
 export const modules = [
