@@ -72,6 +72,13 @@ export function Icon({ name, className }: { name: string; className?: string }) 
       </>
     ),
     arrow: <path d="M5 12h14M13 6l6 6-6 6" />,
+    news: (
+      <>
+        <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H15v14.5A1.5 1.5 0 0 0 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-13Z" />
+        <path d="M15 8h3.5A1.5 1.5 0 0 1 20 9.5v9a1.5 1.5 0 0 1-1.5 1.5" />
+        <path d="M7.5 8h4M7.5 11.5h4M7.5 15h2.5" />
+      </>
+    ),
   };
 
   return (

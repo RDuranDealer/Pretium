@@ -5,6 +5,7 @@ import Services from "@/components/Services";
 import Values from "@/components/Values";
 import Management from "@/components/Management";
 import Clients from "@/components/Clients";
+import News from "@/components/News";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -21,6 +22,7 @@ export default function Home() {
         <Values />
         <Management />
         <Clients />
+        <News />
         <Faq />
         <Contact />
       </main>

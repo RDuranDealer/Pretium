@@ -59,6 +59,7 @@ export const nav = [
   { label: "Valores", href: "#valores" },
   { label: "Gestión", href: "#gestion" },
   { label: "Clientes", href: "#clientes" },
+  { label: "Noticias", href: "#noticias" },
   { label: "Contacto", href: "#contacto" },
 ];
 
