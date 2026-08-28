@@ -1,6 +1,8 @@
 import { getAllNews, type NewsRow, type NewsStatus } from "@/lib/db";
 import { logout, removeNews, updateNewsStatus } from "../actions";
 
+export const dynamic = "force-dynamic";
+
 const dateFormatter = new Intl.DateTimeFormat("es-CL", {
   day: "numeric",
   month: "short",

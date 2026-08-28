@@ -11,6 +11,8 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppFab from "@/components/WhatsAppFab";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <>
