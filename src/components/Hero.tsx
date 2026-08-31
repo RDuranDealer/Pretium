@@ -24,7 +24,7 @@ export default function Hero() {
 
             <h1 className="mt-6 text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
               La gestión de personas,{" "}
-              <span className="text-brand-300">funcionando de verdad</span> en SAP
+              <span className="text-brand-300">funcionando de verdad</span> en SAP.
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
