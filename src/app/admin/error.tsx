@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { reloadOnceForStaleBuild } from "@/lib/stale-build";
 
 export default function AdminError({
   error,
@@ -11,6 +12,7 @@ export default function AdminError({
 }) {
   useEffect(() => {
     console.error(error);
+    reloadOnceForStaleBuild(error);
   }, [error]);
 
   return (

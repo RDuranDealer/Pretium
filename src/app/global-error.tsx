@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { reloadOnceForStaleBuild } from "@/lib/stale-build";
 
 export default function GlobalError({
   error,
@@ -11,6 +12,7 @@ export default function GlobalError({
 }) {
   useEffect(() => {
     console.error(error);
+    reloadOnceForStaleBuild(error);
   }, [error]);
 
   return (
